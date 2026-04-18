@@ -43,10 +43,54 @@ I designed the system prompt to enforce **Strict JSON output**.
 ## 📂 Project Structure
 ```text
 vunoh-ai-internship-279/
-├── core/               # Project configuration and settings
-├── assistant/          # Main logic (Intent extraction, Risk scoring, Task management)
-├── static/             # Custom CSS and Vanilla JavaScript
-├── templates/          # HTML structures for the input and dashboard
-├── requirements.txt    # Project dependencies
-├── sql_dump.sql        # PostgreSQL schema + 5 sample tasks
-└── README.md           # Documentation
+│
+├── manage.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── .env.example
+|
+├── vunoh_backend/                     # Django project configuration
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── apps/                              # All Django applications
+│   │
+│   ├── core/                          # Main business app
+│   │   ├── migrations/
+│   │   │   └── __init__.py
+│   │   ├── templates/core/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   └── tests.py
+│   │
+│   ├── api/                           # REST API layer
+│   │   ├── __init__.py
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   └── tests.py
+│
+├── services/                          # Business logic / AI layer
+│   ├── __init__.py
+│   ├── ai_service.py
+│   ├── data_processing.py
+│   └── ml_models/
+│
+├── static/                            # CSS, JS, images
+│
+├── media/                             # Uploaded files
+│
+├── docs/                              # Documentation (PRO LEVEL)
+│   ├── architecture.md
+│   ├── api_docs.md
+│
+└── tests/                             # Global tests (optional but strong)
+    ├── __init__.py
