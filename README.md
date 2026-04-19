@@ -78,19 +78,9 @@ vunoh-ai-internship-279/
 │   │   ├── urls.py
 │   │   └── tests.py
 │
-├── services/                          # Business logic / AI layer
-│   ├── __init__.py
-│   ├── ai_service.py
-│   ├── data_processing.py
-│   └── ml_models/
-│
-├── static/                            # CSS, JS, images
-│
 ├── media/                             # Uploaded files
 │
-├── docs/                              # Documentation (PRO LEVEL)
-│   ├── architecture.md
-│   ├── api_docs.md
-│
-└── tests/                             # Global tests (optional but strong)
-    ├── __init__.py
+├── docs/                              # Documentation 
+|    ├── architecture.md
+|    ├── api_docs.md
+
