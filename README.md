@@ -9,6 +9,27 @@ Kenyans in the diaspora often rely on informal, slow, and unreliable channels (l
 - **Automates Communication:** Generates tailored messages for WhatsApp, Email, and SMS.
 - **Tracks Progress:** Provides a dashboard to manage tasks from initiation to completion.
 
+  ## Dashboard
+  ![Dashboard Preview](media/vunoh.png)
+  ### 🖥️ Operations Control Center
+The **Control Center** is the heart of the platform, transforming informal diaspora requests into structured, auditable tasks.
+
+* **Intelligence Intake** 🧠: Users submit requests in plain English. The "Run Analysis" feature uses **Gemini 1.5 Flash** to instantly extract intent and entities.
+* **Live Audit Trail** 🌊: A real-time stream tracking unique Task IDs (e.g., `VUN-E315A9`), categories, and timestamps.
+* **Contextual Risk Scoring** 🛡️: Displays a visual risk profile from **0.20 (Low)** to **0.90 (High)** based on Kenyan-specific factors like land fraud or high-value transfers.
+* **Automated Routing**: Intelligently assigns tasks to specialized departments (e.g., **Operations**, **Legal**, or **Finance**).
+* **Reactive State Management** 🔄: Uses **Vanilla JS** and the **Fetch API** to update task statuses (Pending ➡️ In Progress  Completed) instantly without page reloads.
+  
+* ### 🛠️ Backend Administration (Django Admin)
+  ![Dashboard Preview](media/django.png)
+
+The system leverages the **Django Admin** interface to provide staff with a powerful "backstage" view of all operations.
+* **Centralized Oversight**: A single source of truth where admins can monitor all `Task`, `Step`, and `Message` objects.
+* **Data Integrity Verification**: Directly view AI-extracted entities and decimal-accurate **Risk Scores** to ensure processing accuracy.
+* **Advanced Filtering** 🔍: Sidebar tools allow staff to segment the workload by status (e.g., *Pending* vs. *In Progress*) or service type (e.g., *Land Verification*).
+* **Audit Readiness**: Every record includes a `Created At` timestamp, fulfilling the requirement for a verifiable history of diaspora requests.
+  
+
 ## 🛠 Tech Stack
 - **Backend:** **Django (Python)** - Chosen for its robust ORM, security features, and alignment with Vunoh’s internal stack.
 - **Frontend:** **HTML5 & CSS3** - A framework-free, clean UI designed for professional clarity and rapid performance.
