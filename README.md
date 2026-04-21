@@ -103,5 +103,5 @@ vunoh-ai-internship-279/
 │
 ├── docs/                              # Documentation 
 |    ├── architecture.md
-|    ├── api_docs.md
+|    ├── sql
 
